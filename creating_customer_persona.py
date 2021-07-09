@@ -36,11 +36,11 @@ agg_df=agg_df.reset_index()
 agg_df.head()
 
 #transforming "AGE" to categorical variable with statistical methods
-Xmax=agg_df["AGE"].max()  #66
-Xmin= agg_df["AGE"].min() #15
-N=agg_df["AGE"].count() #348
+Xmax=agg_df["AGE"].max()  
+Xmin= agg_df["AGE"].min() 
+N=agg_df["AGE"].count() 
 
-k=1 + (3.3 *math.log10(N))  #number of categories  (first and last categories was combined due to low frequency)
+k=1 + (3.3 *math.log10(N))  #number of categories
 i=(Xmax-Xmin)/k  # interval of categories
 
 agg_df["AGE_CATEGORY"]=pd.cut(agg_df["AGE"], bins = [0, 22, 29, 36, 43, 50, 57 , Xmax],
