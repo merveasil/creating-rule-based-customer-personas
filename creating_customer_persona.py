@@ -1,6 +1,5 @@
-####################################################################################
 # Creating Customer Personas with Rule-Based Classification
-####################################################################################
+
 
 #importing dataset:
 import pandas as pd
